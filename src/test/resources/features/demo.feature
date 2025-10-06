@@ -3,5 +3,5 @@ Feature: Demo Glue Check
 
   Scenario: Say hello
     Given a step
-    When another step
+    When something
     Then a final step

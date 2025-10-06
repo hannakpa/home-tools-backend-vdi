@@ -1,6 +1,7 @@
 package org.ginji.hometoolsbackend.cucumber.steps;
 
 import io.cucumber.java.en.*;
+import io.cucumber.spring.CucumberContextConfiguration;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -9,8 +10,8 @@ public class DemoSteps {
     public void aStep() {
     }
 
-    @When("another step")
-    public void anotherStep() {
+    @When("something")
+    public void something() {
     }
 
     @Then("a final step")
