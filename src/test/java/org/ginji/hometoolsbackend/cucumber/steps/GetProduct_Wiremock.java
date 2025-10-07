@@ -31,11 +31,11 @@ public class GetProduct_Wiremock {
     public void firstStep(String productName) {
         System.out.print("LOG " + productName);
         //stubFor(get("/ping").willReturn(ok("pong")));
-        String mockResponse = "{\"message\": \"Hello, Baeldung!\"}";
+        String mockResponse = "{\"message\": \"Eggs!\"}";
         //return a Json
         stubFor(get("/api/products")
                 .willReturn(okJson(mockResponse)));
-        ResponseEntity<String> response = restTemplate.getForEntity(wireMockUrl+"/api/greeting", String.class);
+        ResponseEntity<String> response = restTemplate.getForEntity(wireMockUrl+"/api/products", String.class);
 
         if (response.getStatusCode().is2xxSuccessful()) {
             System.out.println("Response: " + response.getBody());
